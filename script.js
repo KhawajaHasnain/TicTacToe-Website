@@ -113,5 +113,14 @@ spaces.forEach((el, idx) => {
                     document.querySelector("p").innerText = "Player 2's (o) turn";
                 }
             }
+
+            if (win === true) {
+
+                console.log(document.querySelector(".replay").style.visibility)
+                document.querySelector(".replay").style.visibility = "visible";
+                document.querySelector(".replay").addEventListener("click", () => {
+                    location.reload();
+                })
+            }
         })
 })

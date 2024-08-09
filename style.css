@@ -55,7 +55,13 @@
     transform: rotate(-45deg);
 }
 
-.text, .text2, .text3 {
+.text, .text2, .text3, .button1 {
     display: flex;
     justify-content: center;
+}
+.button1 {
+    margin-top: 10px;
+}
+.replay {
+    visibility: hidden;
 }
