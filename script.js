@@ -49,6 +49,17 @@ function checkWin (turn, game2) {
         }
     }
 
+    let draw = true;
+
+    for (let i of game2) {
+        if (i === ".") {
+            draw = false
+        }
+    }
+    if (draw) {
+        return "draw"
+    }
+
     return false;
 }
 
@@ -103,6 +114,10 @@ spaces.forEach((el, idx) => {
 
                 if (checkWin(turn, game) === true) {
                     document.querySelector(".win").innerText = `Player ${winner} wins`;
+                    win = true;
+                }
+                else if (checkWin(turn, game) === "draw") {
+                    document.querySelector(".win").innerText = `It's a draw`;
                     win = true;
                 }
 
